@@ -71,23 +71,22 @@ header {
     margin: 1rem auto;
     max-width: max-content;
     max-height: max-content;
-    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
 }
 
 .cell {
     width: 20px;
     height: 20px;
-    background-color: white;
-    border: 1px solid #ddd;
     cursor: pointer;
     transition: all 400ms;
+    background: radial-gradient(circle at 30% 30%, #f2f2f2, #e6e6e6 20%, #cccccc 50%, #b3b3b3 75%, #999999);
+    border-radius: 50%;
     &:hover {
-        background-color: rgb(25, 118, 210);
+        background: radial-gradient(circle at 30% 30%, #d9d9d9, #bfbfbf 20%, #a6a6a6 50%, #8c8c8c 75%, #737373);
         transition: all 400ms;
     }
 
     &.alive {
-        background-color: rgb(25, 118, 210);
+        background: radial-gradient(circle at 30% 30%, #333333, #1a1a1a 20%, #0d0d0d 50%, #000000 75%);
     }  
 }
 
