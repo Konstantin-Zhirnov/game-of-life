@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e7ebf0;
+}
+
+header {    
+    width: 100%;
+    padding: 0.4rem 1.4rem;
+    margin-bottom: 2rem;
+    
+    color: rgb(255, 255, 255);
+    background-color: rgb(25, 118, 210);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    .btn {
+        background-color: #1976d2;
+        border: 0;
+        border-radius: 4px;
+        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+        color: #fff;
+        cursor: pointer;
+        display: inline-flex;
+        font-size: .8rem;
+        font-weight: 500;
+        justify-content: center;
+        letter-spacing: .02857em;
+        line-height: 1.75;
+        outline: 0;
+        padding: 4px 10px;
+        text-transform: uppercase;
+        transition: background-color .25s cubic-bezier(.4,0,.2,1) 0ms, box-shadow .25s cubic-bezier(.4,0,.2,1) 0ms, border-color .25s cubic-bezier(.4,0,.2,1) 0ms, color .25s cubic-bezier(.4,0,.2,1) 0ms;
+        
+        &:hover {
+            background-color: #1565c0;
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+        }
+
+        &.disabled {
+            background-color: silver;
+            cursor: initial;
+            box-shadow: none;
+
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.time {
+    text-align: center;
+}
+
+.game {
+    display: grid;
+    gap: 1px;
+    overflow: auto;
+    margin: 1rem auto;
+    max-width: max-content;
+    max-height: max-content;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 400ms;
+    &:hover {
+        background-color: rgb(25, 118, 210);
+        transition: all 400ms;
+    }
+
+    &.alive {
+        background-color: rgb(25, 118, 210);
+    }  
+}
+

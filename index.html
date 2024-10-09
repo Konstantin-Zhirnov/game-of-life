@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Game of Life</h1>
+    </header>
+
+    <main>
+        <div class="buttons">
+            <button id="start" class="btn">Start</button>
+            <button id="stop" class="btn">Stop</button>
+            <button id="random" class="btn">Random</button>
+            <button id="clear" class="btn">Clear</button>
+            <input id="size" type="range" min="10" max="100" value="20">
+        </div>
+
+        <p class="time">Generation time: <span id="time">0</span> ms</p>
+
+        <div id="game" class="game"></div>
+    </main>
+</body>
+</html>
